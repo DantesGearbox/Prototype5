@@ -8,15 +8,20 @@ ModelImporter:
     100000: conveyer_belt
     100002: //RootNode
     100004: conveyor
+    100006: conveyor_collider
     400000: conveyer_belt
     400002: //RootNode
     400004: conveyor
+    400006: conveyor_collider
     2300000: conveyer_belt
     2300002: conveyor
+    2300004: conveyor_collider
     3300000: conveyer_belt
     3300002: conveyor
+    3300004: conveyor_collider
     4300000: conveyer_belt
     4300002: conveyor
+    4300004: conveyor_collider
   materials:
     importMaterials: 1
     materialName: 0
