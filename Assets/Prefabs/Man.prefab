@@ -80,6 +80,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4302848459250228}
   - component: {fileID: 95423703771159948}
+  - component: {fileID: 114935213181903702}
+  - component: {fileID: 114669844012879982}
   - component: {fileID: 54845605948601528}
   - component: {fileID: 136670589465115412}
   m_Layer: 0
@@ -483,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185648229270392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3457248, y: -0.191, z: -6.3189635}
+  m_LocalPosition: {x: 1.2429564, y: -0.84000003, z: -6.6657176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4608035786841170}
@@ -829,6 +831,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114669844012879982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185648229270392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e1bc8ed69c2b04d82101b355bc4aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114935213181903702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185648229270392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39537500272f80641bb42cb4c0c8aff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpObjectsMask:
+    serializedVersion: 2
+    m_Bits: 256
+  pickUpObjectsTag: PickUpObject
+  moveSpeed: 5
+  rotationSpeedPerSecond: 200
+  rotationSpeedPerSecondStandingStill: 200
+  pickupLength: 1.5
 --- !u!136 &136670589465115412
 CapsuleCollider:
   m_ObjectHideFlags: 1
