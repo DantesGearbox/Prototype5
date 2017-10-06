@@ -16,6 +16,6 @@ public class MovementAnim : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        anims.SetFloat("Movement", physics.velocity.magnitude / 3);
+        anims.SetFloat("Movement", physics.velocity.magnitude / 5);
 	}
 }
