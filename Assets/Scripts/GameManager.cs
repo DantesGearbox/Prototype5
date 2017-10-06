@@ -3,6 +3,7 @@ using System.Collections;
 
 using System.Collections.Generic;       //Allows us to use Lists. 
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class GameManager : MonoBehaviour
     public bool showDebugUI;
 
     const float roundTime = 180;                            //Total seconds for a round  
-    private int level = 1;                                  //Current level number, expressed in game as "Day 1".
     private int score;                                      //Current score (of the day)
     private float startTimestamp;                           //Timestamp for when the day started
     private float timeLeft;
@@ -32,18 +32,20 @@ public class GameManager : MonoBehaviour
             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
             Destroy(gameObject);
 
+        
+
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
-    }
 
-    void Start()
-    {
         startTimestamp = Time.time;
     }
 
     void FixedUpdate()
     {
-        timeLeft = roundTime - (Time.time - startTimestamp);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            timeLeft = roundTime - (Time.time - startTimestamp);
+        else
+            timeLeft = -1;
     }
 
     void OnGUI()
@@ -51,10 +53,14 @@ public class GameManager : MonoBehaviour
        if(showDebugUI)
         {
             GUILayout.Label("Scene: " + SceneManager.GetActiveScene().name);
-            GUILayout.Label("Level: " + GetLevel());
             GUILayout.Label("Time Left: " + GetTimeLeft());
             GUILayout.Label("Score: " + GetScore());
         }
+    }
+
+    public void LoadScene(int i)
+    {
+        SceneManager.LoadScene(i);
     }
 
     public float GetTimeLeft()
@@ -65,11 +71,6 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return score;
-    }
-
-    public int GetLevel()
-    {
-        return level;
     }
 
     public void AddScore(int amount)
