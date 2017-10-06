@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TruckManager : MonoBehaviour {
 
-	public List<TruckTiming> trucks;
+    public List<TruckTiming> trucks = new List<TruckTiming>();
 
 	// Use this for initialization
 	void Start () {
