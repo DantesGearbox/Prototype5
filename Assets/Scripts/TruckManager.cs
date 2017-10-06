@@ -20,8 +20,8 @@ public class TruckManager : MonoBehaviour {
 
 public struct TruckTiming{
 
-	float arrival;
-	float departure;
-	GameObject obj;
+	public float arrival;
+	public float departure;
+	public GameObject obj;
 
 }
