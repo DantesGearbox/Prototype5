@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GoalQuad : MonoBehaviour {
 
+	/*
+	 * Type1 = red
+	 * Type2 = green
+	 * Type3 = blue
+	 *
+	 */
+
 	public CrateType type;
 	public string pickUpObjectsTag = "PickUpObject";
 
