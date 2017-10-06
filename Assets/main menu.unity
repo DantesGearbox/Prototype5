@@ -718,7 +718,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1456913540}
+      - m_Target: {fileID: 114930281471543106, guid: 0891312725a916f40aec8ab183b1207c,
+          type: 2}
         m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
@@ -842,7 +843,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1456913540}
+      - m_Target: {fileID: 114930281471543106, guid: 0891312725a916f40aec8ab183b1207c,
+          type: 2}
         m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
@@ -1108,7 +1110,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1456913540}
+      - m_Target: {fileID: 114930281471543106, guid: 0891312725a916f40aec8ab183b1207c,
+          type: 2}
         m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:

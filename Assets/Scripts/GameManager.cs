@@ -48,6 +48,19 @@ public class GameManager : MonoBehaviour
             timeLeft = -1;
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+                Application.Quit();
+            else
+            {
+                LoadScene(0);
+            }
+        }
+    }
+
     void OnGUI()
     {
        if(showDebugUI)
@@ -60,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int i)
     {
-        SceneManager.LoadScene(i);
+        SceneManager.LoadScene(i, LoadSceneMode.Single);
     }
 
     public float GetTimeLeft()
