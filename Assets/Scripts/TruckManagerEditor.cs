@@ -6,26 +6,30 @@ using System.Collections.Generic;
 [CustomEditor(typeof(TruckManager))]
 public class TruckManagerEditor : Editor
 {
-    private List<TruckTiming> newTimes;
-
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
         TruckManager manager = (TruckManager)target;
 
-        newTimes = new List<TruckTiming>();
+        List<TruckTiming> currentTimes = manager.trucks;
         for(int i = 0; i < manager.trucks.Count;i++)
         {
             TruckTiming t = new TruckTiming();
+            EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("Truck " + i);
+            if (GUILayout.Button("Delete"))
+            {
+                currentTimes.RemoveAt(i);
+                break;
+            }
+            EditorGUILayout.EndHorizontal();
             t.obj = (GameObject)EditorGUILayout.ObjectField("Truck Object: ", manager.trucks[i].obj, typeof(GameObject));
             EditorGUILayout.BeginHorizontal();
             t.arrival = EditorGUILayout.FloatField("Arrival (sec): ", manager.trucks[i].arrival);
             t.departure = EditorGUILayout.FloatField("Departure (sec): ", manager.trucks[i].departure);
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Separator();
-            newTimes.Add(t);
         }
 
         EditorGUILayout.BeginHorizontal();
@@ -35,15 +39,10 @@ public class TruckManagerEditor : Editor
             t.arrival = 0;
             t.departure = 50;
             t.obj = null;
-            newTimes.Add(t);
-        }
-
-        if(GUILayout.Button("Delete Last"))
-        {
-            newTimes.RemoveAt(newTimes.Count - 1);
+            currentTimes.Add(t);
         }
         EditorGUILayout.EndHorizontal();
 
-        manager.trucks = newTimes;
+        manager.trucks = currentTimes;
     }
 }
