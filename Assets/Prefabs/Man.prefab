@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 136670589465115412}
   m_Layer: 0
   m_Name: Man
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,21 +302,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1592055804545660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4749324442583590}
-  m_Layer: 0
-  m_Name: pickUpRef
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1604819930468972
 GameObject:
   m_ObjectHideFlags: 1
@@ -499,13 +484,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185648229270392}
-  m_LocalRotation: {x: 0, y: -0.7035765, z: 0, w: 0.7106195}
-  m_LocalPosition: {x: -6.4256973, y: -0.84000003, z: -5.982599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2429564, y: -0.84000003, z: -6.6657176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4608035786841170}
   - {fileID: 4621160439162558}
-  - {fileID: 4749324442583590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -717,19 +701,6 @@ Transform:
   m_Father: {fileID: 4442056452555552}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4749324442583590
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1592055804545660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4302848459250228}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4786783105301102
 Transform:
   m_ObjectHideFlags: 1
@@ -806,7 +777,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1893643962756968}
-  m_LocalRotation: {x: 0.14623436, y: 0.002545446, z: 0.021220727, w: 0.98901904}
+  m_LocalRotation: {x: 0.14623438, y: 0.0025454462, z: 0.021220729, w: 0.9890191}
   m_LocalPosition: {x: -0.000000011175862, y: 0.3593332, z: -0.00000011920907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -886,7 +857,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   pickUpObjectsTag: PickUpObject
-  subManTransform: {fileID: 4749324442583590}
+  liftAmount: 1.7
   moveSpeed: 5
   rotationSpeedPerSecond: 200
   rotationSpeedPerSecondStandingStill: 200

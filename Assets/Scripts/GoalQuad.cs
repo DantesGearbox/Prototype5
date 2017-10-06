@@ -30,8 +30,6 @@ public class GoalQuad : MonoBehaviour {
 				GameManager.instance.AddScore (-50);
 			}
 
-			Debug.Log (GameManager.instance.GetScore ());
-
 			//Delete the crate
 			Destroy (crate.gameObject);
 		}
