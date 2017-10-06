@@ -853,15 +853,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39537500272f80641bb42cb4c0c8aff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upButton: 273
+  downButton: 274
+  leftButton: 276
+  rightButton: 275
+  smoothTime: 0.6
   pickUpObjectsMask:
     serializedVersion: 2
     m_Bits: 256
   pickUpObjectsTag: PickUpObject
   liftAmount: 1.7
-  moveSpeed: 5
+  moveSpeed: 10
   rotationSpeedPerSecond: 200
-  rotationSpeedPerSecondStandingStill: 200
+  rotationSpeedPerSecondStandingStill: 250
   pickupLength: 1.5
+  isPickupToggleable: 1
+  absoluteMovement: 1
 --- !u!136 &136670589465115412
 CapsuleCollider:
   m_ObjectHideFlags: 1
