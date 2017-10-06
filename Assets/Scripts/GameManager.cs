@@ -50,9 +50,10 @@ public class GameManager : MonoBehaviour
     {
        if(showDebugUI)
         {
-            GUILayout.Label("Current Scene: " + SceneManager.GetActiveScene().name);
-            GUILayout.Label("Current Level: " + GetLevel());
+            GUILayout.Label("Scene: " + SceneManager.GetActiveScene().name);
+            GUILayout.Label("Level: " + GetLevel());
             GUILayout.Label("Time Left: " + GetTimeLeft());
+            GUILayout.Label("Score: " + GetScore());
         }
     }
 
