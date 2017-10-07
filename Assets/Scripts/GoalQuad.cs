@@ -22,7 +22,7 @@ public class GoalQuad : MonoBehaviour {
 			if (crate == null)
 				return;
 
-			if(crate.type == type){
+			if(crate.type == type || type == CrateType.None){
 				//Add 100 points
 				GameManager.instance.AddScore (100);
 			} else {

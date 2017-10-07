@@ -139,3 +139,4 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fcb7197c4f0ee354c99afa5d684730e4, type: 3}
   - {fileID: 2800000, guid: 6fbcbcc7058168f4f90acd31bb942fc5, type: 3}
   type: 0
+  randomType: 1

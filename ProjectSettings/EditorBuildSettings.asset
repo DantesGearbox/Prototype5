@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/main menu.unity
     guid: d622a0d47bd9b664396a92d6564f809c
   - enabled: 1
-    path: Assets/sorting day.unity
-    guid: d41eaea273be05640b06b1c97266502b
-  - enabled: 1
     path: Assets/unloading day.unity
     guid: 25c5d45b857330c4eb675993290f4a41
+  - enabled: 1
+    path: Assets/sorting day.unity
+    guid: d41eaea273be05640b06b1c97266502b
   - enabled: 1
     path: Assets/day 3.unity
     guid: cd2a003f66ad7174f8657c1d5327d5a1

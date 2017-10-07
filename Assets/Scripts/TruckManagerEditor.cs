@@ -6,43 +6,53 @@ using System.Collections.Generic;
 [CustomEditor(typeof(TruckManager))]
 public class TruckManagerEditor : Editor
 {
+    List<TruckTiming> currentTimes;
+
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
         TruckManager manager = (TruckManager)target;
 
-        List<TruckTiming> currentTimes = manager.trucks;
-        for(int i = 0; i < manager.trucks.Count;i++)
+        List<TruckTiming> currentTimes = manager.truckTimings;
+        for(int i = 0; i < manager.truckTimings.Count;i++)
         {
-            TruckTiming t = new TruckTiming();
+            TruckTiming t = currentTimes[i];
             EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.LabelField("Truck " + i);
-            if (GUILayout.Button("Delete"))
-            {
-                currentTimes.RemoveAt(i);
-                break;
+            { 
+                EditorGUILayout.LabelField("Truck " + i);
+                if (GUILayout.Button("Delete"))
+                {
+                    currentTimes.RemoveAt(i);
+                    break;
+                }
             }
             EditorGUILayout.EndHorizontal();
-            t.obj = (GameObject)EditorGUILayout.ObjectField("Truck Object: ", manager.trucks[i].obj, typeof(GameObject));
-            EditorGUILayout.BeginHorizontal();
-            t.arrival = EditorGUILayout.FloatField("Arrival (sec): ", manager.trucks[i].arrival);
-            t.departure = EditorGUILayout.FloatField("Departure (sec): ", manager.trucks[i].departure);
+            { 
+                t.truck = (GameObject)EditorGUILayout.ObjectField("Truck Object: ", t.truck, typeof(GameObject), true);
+                EditorGUILayout.BeginHorizontal();
+                t.arrival = EditorGUILayout.FloatField("Arrival (sec): ", t.arrival);
+                t.departure = EditorGUILayout.FloatField("Departure (sec): ", t.departure);
+            }
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Separator();
+
+            currentTimes[i] = t;
         }
 
         EditorGUILayout.BeginHorizontal();
-        if (GUILayout.Button("New"))
-        {
-            TruckTiming t = new TruckTiming();
-            t.arrival = 0;
-            t.departure = 50;
-            t.obj = null;
-            currentTimes.Add(t);
+        { 
+            if (GUILayout.Button("New"))
+            {
+                TruckTiming t = new TruckTiming();
+                t.arrival = 0;
+                t.departure = 50;
+                t.truck = null;
+                currentTimes.Add(t);
+            }
         }
         EditorGUILayout.EndHorizontal();
 
-        manager.trucks = currentTimes;
+        manager.truckTimings = currentTimes;
     }
 }

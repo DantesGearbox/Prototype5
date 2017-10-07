@@ -6,6 +6,7 @@ public class Crate : MonoBehaviour
 {
     public Texture2D[] crateTextures;
     public CrateType type;
+    public bool randomType;
 
     private MeshRenderer mesh;
 
@@ -14,8 +15,11 @@ public class Crate : MonoBehaviour
     {
         mesh = GetComponent<MeshRenderer>();
 
-        int numOfTypes = System.Enum.GetNames(typeof(CrateType)).Length;
-        type = (CrateType)Random.Range(0, numOfTypes);
+        if(randomType)
+        {
+            int numOfTypes = System.Enum.GetNames(typeof(CrateType)).Length;
+            type = (CrateType)Random.Range(0, numOfTypes - 1);
+        }
 
         mesh.material.mainTexture = GetCrateTexture(type);
 	}
@@ -46,5 +50,6 @@ public enum CrateType
 {
     Type_1,
     Type_2,
-    Type_3
+    Type_3,
+    None
 }
