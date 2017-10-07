@@ -20,7 +20,7 @@ public class TruckManagerEditor : Editor
             TruckTiming t = currentTimes[i];
             EditorGUILayout.BeginHorizontal();
             { 
-                EditorGUILayout.LabelField("Truck " + i);
+                EditorGUILayout.LabelField("Timing " + i);
                 if (GUILayout.Button("Delete"))
                 {
                     currentTimes.RemoveAt(i);
@@ -28,8 +28,9 @@ public class TruckManagerEditor : Editor
                 }
             }
             EditorGUILayout.EndHorizontal();
-            { 
-                t.truck = (GameObject)EditorGUILayout.ObjectField("Truck Object: ", t.truck, typeof(GameObject), true);
+            {
+                t.truck = (GameObject)EditorGUILayout.ObjectField("Truck: ", t.truck, typeof(GameObject), true, GUILayout.ExpandWidth(true));
+                t.door = (GameObject)EditorGUILayout.ObjectField("Door: ", t.door, typeof(GameObject), true, GUILayout.ExpandWidth(true));
                 EditorGUILayout.BeginHorizontal();
                 t.arrival = EditorGUILayout.FloatField("Arrival (sec): ", t.arrival);
                 t.departure = EditorGUILayout.FloatField("Departure (sec): ", t.departure);
@@ -46,8 +47,9 @@ public class TruckManagerEditor : Editor
             {
                 TruckTiming t = new TruckTiming();
                 t.arrival = 0;
-                t.departure = 50;
+                t.departure = 180;
                 t.truck = null;
+                t.door = null;
                 currentTimes.Add(t);
             }
         }

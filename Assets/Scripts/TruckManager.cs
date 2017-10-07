@@ -17,6 +17,7 @@ public class TruckManager : MonoBehaviour {
         for(int i = 0; i < truckTimings.Count;i++)
         {
             truckTimings[i].truck.SetActive(false);
+            truckTimings[i].door.SetActive(true);
         }
 	}
 	
@@ -26,11 +27,15 @@ public class TruckManager : MonoBehaviour {
 		for(int i = 0; i < truckTimings.Count;i++)
         {
             if (HasArrived(truckTimings[i]) && truckTimings[i].truck.activeSelf != true)
+            {
                 truckTimings[i].truck.SetActive(true);
+                truckTimings[i].door.SetActive(false);
+            }
             else if (!truckTimings[i].hasDeparted && HasDepartured(truckTimings[i]) && truckTimings[i].truck.activeSelf == true)
             {
                 truckTimings[i].hasDeparted = true;
                 truckTimings[i].truck.SetActive(false);
+                truckTimings[i].door.SetActive(true);
             }
         }
 	}
@@ -58,5 +63,5 @@ public class TruckTiming{
 	public float departure;
     public bool hasDeparted;
 	public GameObject truck;
-
+    public GameObject door;
 }
