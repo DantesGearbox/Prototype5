@@ -13,6 +13,7 @@ public class GoalQuad : MonoBehaviour {
 
 	public CrateType type;
 	public string pickUpObjectsTag = "PickUpObject";
+    public AudioClip wrongTypeClip, correctTypeClip;
 
 	void OnTriggerEnter(Collider other){
 		if(other.CompareTag (pickUpObjectsTag)){
@@ -23,11 +24,14 @@ public class GoalQuad : MonoBehaviour {
 				return;
 
 			if(crate.type == type || type == CrateType.None){
-				//Add 100 points
+                //Add 100 points
+                AudioSource.PlayClipAtPoint(correctTypeClip, transform.position);
 				GameManager.instance.AddScore (100);
+
 			} else {
-				//Subtract 50 points
-				GameManager.instance.AddScore (-50);
+                //Subtract 50 points
+                AudioSource.PlayClipAtPoint(wrongTypeClip, transform.position);
+                GameManager.instance.AddScore (-50);
 			}
 
 			//Delete the crate

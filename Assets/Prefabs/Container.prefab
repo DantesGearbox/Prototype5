@@ -25,7 +25,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1395247784330032
 GameObject:
@@ -45,8 +45,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!4 &4652082156294138
 Transform:
   m_ObjectHideFlags: 1
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395247784330032}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -23.7, y: 1.15, z: -4.85}
+  m_LocalPosition: {x: -23.7, y: 1.15, z: -14.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4660477962947404}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cratePrefab: {fileID: 1547114852413962, guid: dfba1a81cd02a2b4488e02a285fc9515,
     type: 2}
-  startingCratesAmount: 10
+  startingCratesAmount: 7
   timeCounter: 0
   objectsInTruck: []
   bounds:

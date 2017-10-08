@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
             else
             {
                 LoadScene(0);
-                canvas.gameObject.SetActive(false);
             }
         }
 
@@ -79,6 +78,8 @@ public class GameManager : MonoBehaviour
                     p.GetComponent<PlayerController>().enabled = false;
             }
         }
+        else
+            canvas.gameObject.SetActive(false);
         
     }
 

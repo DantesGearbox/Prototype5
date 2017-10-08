@@ -326,23 +326,6 @@ Prefab:
       propertyPath: m_Name
       value: Truck 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1395247784330032, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114167895052856702, guid: 94e8a858f7fb00a45b75559e87399f04,
-        type: 2}
-      propertyPath: startingCratesAmount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012214452184238, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395247784330032, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
   m_IsPrefabParent: 0
@@ -761,17 +744,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   truckTimings:
   - arrival: 0
-    departure: 50
+    departure: 40
     hasDeparted: 0
     truck: {fileID: 1220640243}
     door: {fileID: 1062796518}
-  - arrival: 60
-    departure: 110
+  - arrival: 50
+    departure: 90
     hasDeparted: 0
     truck: {fileID: 491417982}
     door: {fileID: 1031611119}
-  - arrival: 90
-    departure: 140
+  - arrival: 70
+    departure: 110
     hasDeparted: 0
     truck: {fileID: 1220640243}
     door: {fileID: 1062796518}
@@ -835,18 +818,6 @@ Prefab:
     - target: {fileID: 1395247784330032, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
       propertyPath: m_Name
       value: Truck 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395247784330032, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012214452184238, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395247784330032, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94e8a858f7fb00a45b75559e87399f04, type: 2}
