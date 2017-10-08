@@ -238,7 +238,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Take the crates and put them on the conveyor belts. Be sure to sort them
-    depending on their type.
+    depending on their type. You will be punished for putting the crates on wrong
+    conveyor belts.
 --- !u!222 &130881543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -804,6 +805,11 @@ Prefab:
     - target: {fileID: 4535724996238794, guid: 0891312725a916f40aec8ab183b1207c, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114930281471543106, guid: 0891312725a916f40aec8ab183b1207c,
+        type: 2}
+      propertyPath: showDebugUI
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0891312725a916f40aec8ab183b1207c, type: 2}
@@ -1417,7 +1423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: DAY 3 - NO HELP
+  m_Text: DAY 3 - YOU ALONE
 --- !u!222 &1455834830
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1699,8 +1705,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: You will be unloading crates from the containers and putting them into the
-    green area. The rest will be taken care of. Remember the trucks can't stay all
-    day!
+    unloading area. Remember trucks can't stay all day! You will be punished for the
+    crates you don't get in time.
 --- !u!222 &1911855093
 CanvasRenderer:
   m_ObjectHideFlags: 0
