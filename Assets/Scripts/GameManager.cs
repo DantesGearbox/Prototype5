@@ -3,6 +3,7 @@ using System.Collections;
 
 using System.Collections.Generic;       //Allows us to use Lists. 
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;                   //Allows us to use Text
 using System;
 
 public class GameManager : MonoBehaviour
@@ -59,6 +60,45 @@ public class GameManager : MonoBehaviour
                 LoadScene(0);
             }
         }
+
+        if (SceneManager.GetActiveScene().name != "main menu")
+        {
+            if (timeLeft <= 0)
+            {
+                timeLeft = 0;
+                // TODO End round, show score and go back to main menu
+                SetHighScore(); 
+            }
+        }
+        
+    }
+
+    void SetHighScore()
+    {
+        if (SceneManager.GetActiveScene().name == "unloading day")
+        {
+            int hs = PlayerPrefs.GetInt("unloadinghighscore", defaultValue: 0);
+            if (hs < score)
+            {
+                PlayerPrefs.SetInt("unloadinghighscore", score);
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "sorting day")
+        {
+            int hs = PlayerPrefs.GetInt("sortinghighscore", defaultValue: 0);
+            if (hs < score)
+            {
+                PlayerPrefs.SetInt("sortinghighscore", score);
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "day 3")
+        {
+            int hs = PlayerPrefs.GetInt("day3highscore", defaultValue: 0);
+            if (hs < score)
+            {
+                PlayerPrefs.SetInt("day3highscore", score);
+            }
+        }
     }
 
     void OnGUI()
@@ -68,6 +108,16 @@ public class GameManager : MonoBehaviour
             GUILayout.Label("Scene: " + SceneManager.GetActiveScene().name);
             GUILayout.Label("Time Left: " + GetTimeLeft());
             GUILayout.Label("Score: " + GetScore());
+        }
+
+        if (SceneManager.GetActiveScene().name == "main menu")
+        {
+            Text uhs = GameObject.Find("high score unloading").GetComponent<Text>();
+            uhs.text = "HIGH SCORE: " + PlayerPrefs.GetInt("unloadinghighscore", defaultValue: 0);
+            Text shs = GameObject.Find("high score sorting").GetComponent<Text>();
+            shs.text = "HIGH SCORE: " + PlayerPrefs.GetInt("sortinghighscore", defaultValue: 0);
+            Text dhs = GameObject.Find("high score day 3").GetComponent<Text>();
+            dhs.text = "HIGH SCORE: " + PlayerPrefs.GetInt("day3highscore", defaultValue: 0);
         }
     }
 
