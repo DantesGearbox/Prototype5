@@ -8,10 +8,19 @@ public class Crate : MonoBehaviour
     public CrateType type;
     public bool randomType;
 
-    private MeshRenderer mesh;
+    [Header("Sounds")]
+    public AudioClip[] hitClips;
 
-	// Use this for initialization
-	void Start ()
+    private MeshRenderer mesh;
+    private Rigidbody physics;
+
+    void Awake()
+    {
+        physics = GetComponent<Rigidbody>();
+    }
+
+    // Use this for initialization
+    void Start ()
     {
         mesh = GetComponent<MeshRenderer>();
 
@@ -23,12 +32,14 @@ public class Crate : MonoBehaviour
 
         mesh.material.mainTexture = GetCrateTexture(type);
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void OnCollisionEnter(Collision other)
     {
-		
-	}
+        if(physics.velocity.magnitude > 0.05f)
+        {
+            AudioSource.PlayClipAtPoint(hitClips[Random.Range(0, hitClips.Length)], other.contacts[0].point);
+        }
+    }
 
     public Texture2D GetCrateTexture(CrateType type)
     {

@@ -140,3 +140,9 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6fbcbcc7058168f4f90acd31bb942fc5, type: 3}
   type: 0
   randomType: 1
+  physics: {fileID: 0}
+  hitClips:
+  - {fileID: 8300000, guid: f4f220b64e3658c45b8ef353a7122b97, type: 3}
+  - {fileID: 8300000, guid: fdb3180e4a0cda04ab19040fbaa0f9f2, type: 3}
+  - {fileID: 8300000, guid: cef9efc11ee25e04ca69b2e0aae9f31f, type: 3}
+  - {fileID: 8300000, guid: 0f5a4dc6b8c5c6640befbb6bff36261a, type: 3}
