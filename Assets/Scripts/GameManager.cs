@@ -84,6 +84,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void ResetGM()
+    {
+        startTimestamp = Time.time;
+        score = 0;
+        timeLeft = 120; 
+    }
+
     void SetHighScore()
     {
         if (SceneManager.GetActiveScene().name == "unloading day")
@@ -134,6 +141,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int i)
     {
+        ResetGM();
         SceneManager.LoadScene(i, LoadSceneMode.Single);
     }
 
