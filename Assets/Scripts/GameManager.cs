@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         startTimestamp = Time.time;
+
+        canvas.gameObject.SetActive(false);
     }
 
     void FixedUpdate()
@@ -50,6 +52,23 @@ public class GameManager : MonoBehaviour
             timeLeft = roundTime - (Time.time - startTimestamp);
         else
             timeLeft = -1;
+
+        if (SceneManager.GetActiveScene().name != "main menu")
+        {
+            if (timeLeft <= 0)
+            {
+                timeLeft = 0;
+                canvas.gameObject.SetActive(true);
+                scoreText.text = "" + score;
+                SetHighScore();
+
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (GameObject p in players)
+                    p.GetComponent<PlayerController>().enabled = false;
+            }
+        }
+        else
+            canvas.gameObject.SetActive(false);
     }
 
     void Update()
@@ -63,24 +82,6 @@ public class GameManager : MonoBehaviour
                 LoadScene(0);
             }
         }
-
-        if (SceneManager.GetActiveScene().name != "main menu")
-        {
-            if (timeLeft <= 0)
-            {
-                timeLeft = 0;
-                canvas.gameObject.SetActive(true);
-                scoreText.text = ""+score;
-                SetHighScore();
-
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (GameObject p in players)
-                    p.GetComponent<PlayerController>().enabled = false;
-            }
-        }
-        else
-            canvas.gameObject.SetActive(false);
-        
     }
 
     void SetHighScore()
