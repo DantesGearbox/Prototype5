@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public Canvas canvas;
     public Text scoreText;
 
-    const float roundTime = 180;                            //Total seconds for a round  
+    const float roundTime = 120;                            //Total seconds for a round  
     private int score;                                      //Current score (of the day)
     private float startTimestamp;                           //Timestamp for when the day started
     private float timeLeft;
@@ -72,7 +72,11 @@ public class GameManager : MonoBehaviour
                 timeLeft = 0;
                 canvas.gameObject.SetActive(true);
                 scoreText.text = ""+score;
-                SetHighScore(); 
+                SetHighScore();
+
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (GameObject p in players)
+                    p.GetComponent<PlayerController>().enabled = false;
             }
         }
         

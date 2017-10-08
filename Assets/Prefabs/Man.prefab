@@ -485,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185648229270392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.52, y: -0.647, z: -5.13}
+  m_LocalPosition: {x: -7.5, y: -0.647, z: -9.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4608035786841170}
@@ -862,7 +862,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   pickUpObjectsTag: PickUpObject
-  liftAmount: 1.7
+  liftAmount: 1.3
   moveSpeed: 10
   rotationSpeedPerSecond: 200
   rotationSpeedPerSecondStandingStill: 250
@@ -871,6 +871,12 @@ MonoBehaviour:
   absoluteMovement: 1
   pickupClip: {fileID: 8300000, guid: 55b5825f7b4a4054d822e1bd100140b3, type: 3}
   dropdownClip: {fileID: 8300000, guid: 45d2d1b0aca325e48a74fecec2483f10, type: 3}
+  stepClips:
+  - {fileID: 8300000, guid: 0d9a2dbea3281e74eb8e7a93f323be45, type: 3}
+  - {fileID: 8300000, guid: 7fdb5020649ea234684e304150ea608d, type: 3}
+  - {fileID: 8300000, guid: d8eb29fe6459b374994cd8f1b04d52e9, type: 3}
+  - {fileID: 8300000, guid: d1a47ae6e30b65f4b86d85655d0785bb, type: 3}
+  - {fileID: 8300000, guid: 86d1e366d589c7848bf145491cd90036, type: 3}
 --- !u!136 &136670589465115412
 CapsuleCollider:
   m_ObjectHideFlags: 1
