@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public bool showDebugUI;
 
+    public Canvas canvas;
+    public Text scoreText;
+
     const float roundTime = 180;                            //Total seconds for a round  
     private int score;                                      //Current score (of the day)
     private float startTimestamp;                           //Timestamp for when the day started
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 LoadScene(0);
+                canvas.gameObject.SetActive(false);
             }
         }
 
@@ -66,7 +70,8 @@ public class GameManager : MonoBehaviour
             if (timeLeft <= 0)
             {
                 timeLeft = 0;
-                // TODO End round, show score and go back to main menu
+                canvas.gameObject.SetActive(true);
+                scoreText.text = ""+score;
                 SetHighScore(); 
             }
         }
