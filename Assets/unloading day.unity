@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112000006, guid: a52da599305bc8a43aad778dc4f369c2,
+  m_LightingDataAsset: {fileID: 112000018, guid: a52da599305bc8a43aad778dc4f369c2,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -240,6 +240,60 @@ Prefab:
     - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
       propertyPath: m_Name
       value: Shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &159857589
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.2299998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_Name
+      value: Shelf (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
@@ -422,6 +476,10 @@ Prefab:
     - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
       propertyPath: m_Name
       value: Shelf (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
@@ -957,6 +1015,10 @@ Prefab:
       propertyPath: m_Name
       value: Shelf (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
   m_IsPrefabParent: 0
@@ -998,6 +1060,60 @@ Prefab:
     - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2036075553
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -17.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572881395091744, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410667070046530, guid: 58666df4749052744a4b77ad2219331f, type: 2}
+      propertyPath: m_Name
+      value: Shelf (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58666df4749052744a4b77ad2219331f, type: 2}
